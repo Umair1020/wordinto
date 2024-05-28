@@ -19,7 +19,8 @@ const ShopComp = () => {
             setShowValidation(false);
             const updatedCard = { 
                 ...card, 
-                price: selectedType === 'Physical' ? '$8.00' : '$3.00' 
+                price: selectedType === 'Physical' ? '$8.00' : '$3.00',
+                selectedType: selectedType
             };
             navigate('/payment', { state: { card: updatedCard } });
         }
