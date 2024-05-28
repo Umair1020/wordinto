@@ -17,7 +17,11 @@ const ShopComp = () => {
             setShowValidation(true);
         } else {
             setShowValidation(false);
-            navigate('/payment', { state: { card } });
+            const updatedCard = { 
+                ...card, 
+                price: selectedType === 'Physical' ? '$8.00' : '$3.00' 
+            };
+            navigate('/payment', { state: { card: updatedCard } });
         }
     };
 
@@ -44,9 +48,8 @@ const ShopComp = () => {
                         <div className='col-lg-6' style={{ marginTop: "100px" }}>
                             <h2>{card.title}</h2>
                             <p className='w-75'>{card.para}</p>
-                            {/* <br /> */}
                             <div className='d-flex align-items-center'>
-                                <h5 class=" text-light  title text-center">{card.price}</h5>
+                                <h5 className="text-light title text-center">{selectedType === 'Physical' ? '$8.00' : '$3.00'}</h5>
                                 <button className="button mx-5" onClick={handleBuyNowClick}>Buy Now</button>
                             </div>
                         </div>

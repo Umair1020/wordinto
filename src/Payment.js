@@ -3,7 +3,6 @@ import { useLocation } from 'react-router-dom';
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements, CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 
-
 // Load your Stripe publishable key
 const stripePromise = loadStripe('your-stripe-publishable-key');
 
@@ -62,18 +61,15 @@ const CheckoutForm = () => {
     <form onSubmit={handleSubmit}>
       <div className='row'>
       <div className="form-group w-50 col-lg-6">
-        <label>Sender's Name
-        </label>
-        <input type="email" className="form-control" required />
+        <label>Sender's Name</label>
+        <input type="text" className="form-control" required />
       </div>
       <div className="form-group col-lg-6" >
-        <label>Receiver's Name
-        </label>
-        <input type="email" className="form-control" required />
+        <label>Receiver's Name</label>
+        <input type="text" className="form-control" required />
       </div>
       <div className="form-group">
-        <label>Receiver's Email
-        </label>
+        <label>Receiver's Email</label>
         <input type="email" className="form-control" required />
       </div>
       <div className="form-group">

@@ -24,7 +24,7 @@ const Home = () => {
             </Desktop>
             <Mobile>
                 <Main />
-                <Footer />
+                {/* <Footer /> */}
             </Mobile>
         </>
     );
