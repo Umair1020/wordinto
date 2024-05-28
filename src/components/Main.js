@@ -165,15 +165,17 @@ const Main = () => {
             <figure>
                 <section className="section__first is--scrolled js--scrollify" data-section-name="second">
                     <div className="row" id="inner">
+                        
                         <div className="col-lg-12 d-flex justify-content-center mx-auto " data-aos="fade-up" data-aos-duration="2000" style={{ marginTop: "-30px" }}>
                             <img
                                 id="first-img"
-                                className="d-flex justify-content-center mx-auto img"
+                                className="d-flex justify-content-center mx-auto img animate__animated animate__flip"
                                 data-rotate-x="90deg"
                                 data-move-z="-500px"
                                 data-move-y="200px"
                                 src="/beg1.png"
                             />
+                           
                             
                         </div>
                         <div className="col-lg-4" data-aos="fade-up-right"

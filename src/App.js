@@ -26,7 +26,6 @@ function App() {
       <Route path="/card/:title" element={<ShopComp />} />
       <Route path="/view" element={<ShopComp />} />
       <Route path="/middle" element={<Mid />} />
-      <Route path="/shop" element={<Shop />} />
       <Route path="/about" element={<Aboutus />} />
       <Route path="/blog" element={<Blog />} />
       <Route path="/demo" element={<Demo />} />
