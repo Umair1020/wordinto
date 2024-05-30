@@ -103,9 +103,7 @@ const CheckoutForm = ({ card }) => {
         <div className="form-group">
           <label>Country or region</label>
           <select className="form-control" name="country" required>
-            <option value="Pakistan">Pakistan</option>
-            <option value="United States">United States</option>
-            {/* Add other countries as needed */}
+            <option selected value="United States">United States</option>
           </select>
         </div>
         <div className="form-group">
