@@ -61,6 +61,7 @@ const CheckoutForm = ({ card }) => {
       formData.append('cardLast4', paymentMethod.card.last4);
       formData.append('amount', card.price);
       formData.append('selectedType', card.selectedType);
+      formData.append('title', card.title);
 
       // Send data to the server using Axios
       try {
@@ -190,7 +191,7 @@ const CheckoutForm = ({ card }) => {
         <div className="form-group">
           <label>Country or region</label>
           <select className="form-control" name="country" required>
-
+            <option value="Pakistan">Pakistan</option>
             <option value="United States">United States</option>
             {/* Add other countries as needed */}
           </select>
