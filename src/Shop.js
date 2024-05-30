@@ -6,26 +6,31 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { Footer } from './components/Footer';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Shop = () => {
+    const navigate = useNavigate();
+    const handleLinkClick = (path) => {
+        navigate(path);
+        window.scrollTo(0, 0);
+    };
     const cards = [
         {
             img: '/beg1.png',
             title: 'Prelude 8',
-            para: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+            para: 'I hope that my honesty doesn’t offend you, but you wear too much makeup. There’s nothing wrong with enhancing yourself, but your natural beauty is more radiant. Whenever I hug you, I get smudges on my shirt, and every time I kiss you, I have to wipe my lips because of the lipstick.            ',
             price: "$3.00"
         },
         {
             img: '/beg2.png',
             title: 'Prelude 4',
-            para: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+            para: 'You were not dishonest. Although you did send me a text, you did not actually hit the "send" button. Additionally, you did try to call me, but the phone only rang once before you ended the call.            If you dont want to be with me be honest by telling me plainly.',
             price: "$3.00"
         },
         {
             img: '/beg4.png',
             title: 'Just Curious',
-            para: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+            para: 'I would like to get to know you more, but without any pressure            .',
             price: "$3.00"
         },
 
@@ -34,38 +39,44 @@ const Shop = () => {
         {
             img: '/mid7.png',
             title: 'Prelude 81',
-            para: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+            para: 'Please understand that I am dealing with something that I am not ready to discuss. I will share it with you in due time, so please be patient.            ',
             price: "$3.00"
         },
         {
             img: '/mid3.png',
             title: 'Prelude 65',
-            para: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+            para: 'Your outer beauty initially caught my eye, but over time I discovered your inner beauty, which only enhanced my admiration for you.            ',
             price: "$3.00"
         },
         {
             img: '/mid6.png',
             title: 'Prelude 6',
-            para: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+            para: 'Expressing love is uncomfortable for me, even though I truly feel it. My upbringing did not include regularly saying those three words.            ',
             price: "$3.00"
         },
         {
             img: '/mid4.png',
             title: 'Prelude 1',
-            para: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+            para: 'I no longer have romantic feelings for my friend. How can I express this without hurting them? ',
             price: "$3.00"
         },
 
         {
             img: '/mid1.png',
-            title: 'Prelude 3',
-            para: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+            title: 'Prelude 53',
+            para: 'Despite your insistence that everything is fine, I sense that something is troubling you. Can we freely talk about it?            ',
             price: "$3.00"
         },
         {
             img: '/mid2.png',
             title: 'Prelude 5',
-            para: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+            para: 'Lets keep our disagreements private between us. When we make up, things will be fine, but others you involve may hold on to grudges.',
+            price: "$3.00"
+        },
+        {
+            img: '/mid8.png',
+            title: 'Prelude 40',
+            para: 'What happened to the flowers, the candy, the dates, and most importantly, the romance?            .',
             price: "$3.00"
         },
     ];
@@ -73,25 +84,37 @@ const Shop = () => {
         {
             img: '/cross1.png',
             title: 'Prelude 53',
-            para: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+            para: 'Despite your insistence that everything is fine, I sense that something is troubling you. Can we freely talk about it?            ',
             price: "$3.00"
         },
         {
             img: '/cross4.png',
             title: 'Prelude 99',
-            para: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+            para: 'It’s better that we break all ties with one another. Move on with your life!           ',
             price: "$3.00"
         },
         {
             img: '/cross3.png',
             title: 'Prelude 2',
-            para: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+            para: 'I am receiving conflicting messages from you. One day you show affection by kissing and holding me, and the next you claim you are not looking to pursue a relationship with me.            ',
             price: "$3.00"
         },
         {
             img: '/cross5.png',
             title: 'Prelude 15',
-            para: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+            para: 'All the indications suggest that you are being unfaithful to me.',
+            price: "$3.00"
+        },
+        {
+            img: '/cross6.png',
+            title: 'Prelude 16',
+            para: 'The approaching wedding day has me concerned about the warning signs I ve noticed. Throughout our relationship, it has become clear that we are not well-matched. I believe we should see other people before making any permanent decisions.            ',
+            price: "$3.00"
+        },
+        {
+            img: '/cross7.png',
+            title: 'Prelude 24',
+            para: 'I am unable to move past the fact that you cheated on me. Despite our efforts to fix things, I find it hard to trust you. Therefore, in order to spare you from my lack of trust, I have made the decision to leave.            ',
             price: "$3.00"
         },
     ];
@@ -146,7 +169,7 @@ const Shop = () => {
                                         {/* <h5 class=" text-light mx-1 title text-center">{card.price}</h5> */}
                                     </div>
                                     <div className="info">
-                                        <Link to={`/card/${card.title}`} state={{ card }} className="button">View Now</Link>
+                                        <Link to={`/card/${card.title}`} onClick={() => handleLinkClick(`/card/${card.title}`)} state={{ card }} className="button">View Now</Link>
                                     </div>                                </div>
 
                             </SwiperSlide>
@@ -198,7 +221,7 @@ const Shop = () => {
                                         {/* <h5 class=" text-light mx-1 title text-center">{card.price}</h5> */}
                                     </div>
                                     <div className="info">
-                                        <Link to={`/card/${card.title}`} state={{ card }} className="button">View Now</Link>
+                                        <Link to={`/card/${card.title}`} onClick={() => handleLinkClick(`/card/${card.title}`)} state={{ card }} className="button">View Now</Link>
                                     </div>
                                 </div>
                             </SwiperSlide>
@@ -249,7 +272,7 @@ const Shop = () => {
                                         {/* <h5 class=" text-light mx-1 title text-center">{card.price}</h5> */}
                                     </div>
                                     <div className="info">
-                                        <Link to={`/card/${card.title}`} state={{ card }} className="button">View Now</Link>
+                                        <Link to={`/card/${card.title}`} onClick={() => handleLinkClick(`/card/${card.title}`)} state={{ card }} className="button">View Now</Link>
                                     </div>
                                 </div>
 

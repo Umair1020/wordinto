@@ -11,30 +11,31 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import 'aos/dist/aos.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Footer } from './Footer';
 
 AOS.init();
 
 
 const Main = () => {
+    const navigate = useNavigate();
     const cards = [
         {
             img: '/beg1.png',
             title: 'Prelude 8',
-            para: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+            para: 'I hope that my honesty doesn’t offend you, but you wear too much makeup. There’s nothing wrong with enhancing yourself, but your natural beauty is more radiant. Whenever I hug you, I get smudges on my shirt, and every time I kiss you, I have to wipe my lips because of the lipstick.            ',
             price: "$3.00"
         },
         {
             img: '/beg2.png',
             title: 'Prelude 4',
-            para: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+            para: 'You were not dishonest. Although you did send me a text, you did not actually hit the "send" button. Additionally, you did try to call me, but the phone only rang once before you ended the call.            If you dont want to be with me be honest by telling me plainly.',
             price: "$3.00"
         },
         {
             img: '/beg4.png',
             title: 'Just Curious',
-            para: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+            para: 'I would like to get to know you more, but without any pressure            .',
             price: "$3.00"
         },
 
@@ -43,38 +44,44 @@ const Main = () => {
         {
             img: '/mid7.png',
             title: 'Prelude 81',
-            para: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+            para: 'Please understand that I am dealing with something that I am not ready to discuss. I will share it with you in due time, so please be patient.            ',
             price: "$3.00"
         },
         {
             img: '/mid3.png',
             title: 'Prelude 65',
-            para: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+            para: 'Your outer beauty initially caught my eye, but over time I discovered your inner beauty, which only enhanced my admiration for you.            ',
             price: "$3.00"
         },
         {
             img: '/mid6.png',
             title: 'Prelude 6',
-            para: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+            para: 'Expressing love is uncomfortable for me, even though I truly feel it. My upbringing did not include regularly saying those three words.            ',
             price: "$3.00"
         },
         {
             img: '/mid4.png',
             title: 'Prelude 1',
-            para: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+            para: 'I no longer have romantic feelings for my friend. How can I express this without hurting them? ',
             price: "$3.00"
         },
 
         {
             img: '/mid1.png',
-            title: 'Prelude 3',
-            para: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+            title: 'Prelude 53',
+            para: 'Despite your insistence that everything is fine, I sense that something is troubling you. Can we freely talk about it?            ',
             price: "$3.00"
         },
         {
             img: '/mid2.png',
             title: 'Prelude 5',
-            para: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+            para: 'Lets keep our disagreements private between us. When we make up, things will be fine, but others you involve may hold on to grudges.',
+            price: "$3.00"
+        },
+        {
+            img: '/mid8.png',
+            title: 'Prelude 40',
+            para: 'What happened to the flowers, the candy, the dates, and most importantly, the romance?            .',
             price: "$3.00"
         },
     ];
@@ -82,25 +89,37 @@ const Main = () => {
         {
             img: '/cross1.png',
             title: 'Prelude 53',
-            para: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+            para: 'Despite your insistence that everything is fine, I sense that something is troubling you. Can we freely talk about it?            ',
             price: "$3.00"
         },
         {
             img: '/cross4.png',
             title: 'Prelude 99',
-            para: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+            para: 'It’s better that we break all ties with one another. Move on with your life!           ',
             price: "$3.00"
         },
         {
             img: '/cross3.png',
             title: 'Prelude 2',
-            para: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+            para: 'I am receiving conflicting messages from you. One day you show affection by kissing and holding me, and the next you claim you are not looking to pursue a relationship with me.            ',
             price: "$3.00"
         },
         {
             img: '/cross5.png',
             title: 'Prelude 15',
-            para: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
+            para: 'All the indications suggest that you are being unfaithful to me.',
+            price: "$3.00"
+        },
+        {
+            img: '/cross6.png',
+            title: 'Prelude 16',
+            para: 'The approaching wedding day has me concerned about the warning signs I ve noticed. Throughout our relationship, it has become clear that we are not well-matched. I believe we should see other people before making any permanent decisions.            ',
+            price: "$3.00"
+        },
+        {
+            img: '/cross7.png',
+            title: 'Prelude 24',
+            para: 'I am unable to move past the fact that you cheated on me. Despite our efforts to fix things, I find it hard to trust you. Therefore, in order to spare you from my lack of trust, I have made the decision to leave.            ',
             price: "$3.00"
         },
     ];
@@ -230,14 +249,20 @@ const Main = () => {
     //     };
     // }, []);
     const Desktop = ({ children }) => {
-        const isDesktop = useMediaQuery({ minWidth: 992 })
+        const isDesktop = useMediaQuery({ minWidth: 651 })
         return isDesktop ? children : null
     }
 
     const Mobile = ({ children }) => {
-        const isMobile = useMediaQuery({ maxWidth: 767 })
+        const isMobile = useMediaQuery({ maxWidth: 650 })
         return isMobile ? children : null
     }
+
+    const handleLinkClick = (path) => {
+        navigate(path);
+        window.scrollTo(0, 0);
+    };
+
     return (
         <>
             <Desktop>
@@ -252,7 +277,7 @@ const Main = () => {
                             <img
                                 id="second-img"
                                 src="/banner.png"
-                                className='w-100 h-75'
+                                className='w-100 h-100'
                             />
                             <div className="overlay">
                                 <br />
@@ -260,7 +285,7 @@ const Main = () => {
                                 <br /><br /><br /><br />
                                 <div className="middle-section">
                                     <h2>INTO WORDS</h2>
-                                    <button className="button">Greeting Cards</button>
+                                    <Link to="/shop" onClick={() => handleLinkClick("/shop")} style={{ listStyle: "none", textDecoration: "none" }}>   <button className="button">Greeting Cards</button> </Link>
                                 </div>
                             </div>
                         </section>
@@ -294,7 +319,7 @@ const Main = () => {
                                     <div className="begin" data-aos="zoom-in-down" data-aos-duration="1000"
                                     >
                                         <h4 className="text-center">BEGINNING</h4>
-                                        <Link to="/begning" style={{ listStyle: "none", textDecoration: "none" }}>  <div className="d-flex align-items-center justify-content-center">
+                                        <Link to="/begning" onClick={() => handleLinkClick("/begning")} style={{ listStyle: "none", textDecoration: "none" }}>  <div className="d-flex align-items-center justify-content-center">
                                             <button className="shop mx-auto">Shop Now</button>
                                         </div></Link>
                                     </div>
@@ -318,11 +343,9 @@ const Main = () => {
                                     />
                                 </div>
                             </div>
-
                         </section>
 
                     </figure>
-
 
                     <figure>
                         <section class="section__third is--scrolled js--scrollify js--third" data-section-name="third">
@@ -352,7 +375,7 @@ const Main = () => {
                                         <button className='shop mx-auto'>Shop Now</button>
                                     </div>
                                 </Link> */}
-                                        <Link to="/middle" style={{ listStyle: "none", textDecoration: "none" }}>
+                                        <Link to="/middle" onClick={() => handleLinkClick("/middle")} style={{ listStyle: "none", textDecoration: "none" }}>
                                             <div className="d-flex align-items-center justify-content-center">
                                                 <button className='shop mx-auto'>Shop Now</button>
                                             </div>
@@ -415,7 +438,7 @@ const Main = () => {
                                 }} >
                                     <div className='begins' data-aos="zoom-in-down" data-aos-duration="1000">
                                         <h4 className='text-center'>CROSSROAD</h4>
-                                        <Link to="/crossroad" style={{ listStyle: "none", textDecoration: "none" }}>
+                                        <Link to="/crossroad" onClick={() => handleLinkClick("/crossroad")} style={{ listStyle: "none", textDecoration: "none" }}>
                                             <div className="d-flex align-items-center justify-content-center">
                                                 <button className='shop mx-auto'>Shop Now</button>
                                             </div>
@@ -456,7 +479,7 @@ const Main = () => {
                             <img
                                 id="second-img"
                                 src="/banner.png"
-                                className='w-100 ' style={{ height: "60vh" }}
+                                className='w-100 ' style={{ height: "65vh" }}
                             />
                             <div className="overlay">
                                 <br />
@@ -509,7 +532,7 @@ const Main = () => {
                                                 <img src={card.img} class=" img2 " alt="..." />
 
                                                 <div className="info">
-                                                    <Link to={`/card/${card.title}`} state={{ card }} className="button">View Now</Link>
+                                                    <Link to={`/card/${card.title}`} onClick={() => handleLinkClick(`/card/${card.title}`)} state={{ card }} className="button">View Now</Link>
                                                 </div>                                </div>
 
                                         </SwiperSlide>
@@ -535,11 +558,12 @@ const Main = () => {
                                         style={{ width: "450px", marginTop: "-400px" }}
                                     />
                                 </div> */}
-                                <div className="col-lg-4">
+                                <div className="col-lg-4"> <br /><br />
                                     <div className="begin" data-aos="zoom-in-down" data-aos-duration="1000"
                                     >
+                                       
                                         <h4 className="text-center">BEGINNING</h4>
-                                        <Link to="/begning" style={{ listStyle: "none", textDecoration: "none" }}>  <div className="d-flex align-items-center justify-content-center">
+                                        <Link to="/begning" onClick={() => handleLinkClick("/begning")} style={{ listStyle: "none", textDecoration: "none" }}>  <div className="d-flex align-items-center justify-content-center">
                                             <button className="shop mx-auto">Shop Now</button>
                                         </div></Link>
                                     </div>
@@ -549,6 +573,7 @@ const Main = () => {
                                             The point in time or space at which something starts. <br /> <br />
                                             Two people getting to know each other. The beginning stage: the couple can’t get enough of each other: they stay on the phone together all night, cannot wait to get in each other’s presence; flowers, butterflies, dates and dinners
                                         </p>
+                                        <br />
                                     </div>
                                 </div>
                                 {/* <div className="col-lg-4" data-aos="fade-up-left"
@@ -570,7 +595,7 @@ const Main = () => {
                     <figure>
                         <section class="section__third is--scrolled js--scrollify js--third" data-section-name="third">
                             <div className='row'>
-                            <Swiper
+                                <Swiper
                                     slidesPerView={1}
                                     spaceBetween={20}
                                     style={{
@@ -603,26 +628,23 @@ const Main = () => {
                                 >
                                     {middle.map((card, index) => (
                                         <SwiperSlide key={index}>
-                                            <div className='cards'>
+                                            <br />
+                                            <div className='cards'> 
                                                 <img src={card.img} class=" img2 " alt="..." />
 
                                                 <div className="info">
-                                                    <Link to={`/card/${card.title}`} state={{ card }} className="button">View Now</Link>
+                                                    <Link to={`/card/${card.title}`} onClick={() => handleLinkClick(`/card/${card.title}`)} state={{ card }} className="button">View Now</Link>
                                                 </div>                                </div>
 
                                         </SwiperSlide>
                                     ))}
                                 </Swiper>
 
-                                <div className='col-lg-4   '><br /><br />
-                                    <div className='begin ' data-aos="zoom-in-down" data-aos-duration="1000" style={{ marginTop: "-100px" }}>
+                                <div className='col-lg-4   '><br /><br /><br /><br /><br /><br />
+                                   <div className='begin ' data-aos="zoom-in-down" data-aos-duration="1000" style={{ marginTop: "-100px" }}>
                                         <h4 className='text-center'>Middle</h4>
-                                        {/* <Link to="/middle" style={{ listStyle: "none", textDecoration: "none" }}>
-                        <div className="d-flex align-items-center justify-content-center">
-                            <button className='shop mx-auto'>Shop Now</button>
-                        </div>
-                    </Link> */}
-                                        <Link to="/middle" style={{ listStyle: "none", textDecoration: "none" }}>
+                                       
+                                        <Link to="/middle" onClick={() => handleLinkClick("/middle")} style={{ listStyle: "none", textDecoration: "none" }}>
                                             <div className="d-flex align-items-center justify-content-center">
                                                 <button className='shop mx-auto'>Shop Now</button>
                                             </div>
@@ -656,7 +678,7 @@ const Main = () => {
                                 {/* <div className='col-lg-4  '>
 <img src='/mid3.png' className='img'  />
 </div> */}
-                                 <Swiper
+                                <Swiper
                                     slidesPerView={1}
                                     spaceBetween={20}
                                     style={{
@@ -689,11 +711,13 @@ const Main = () => {
                                 >
                                     {cross.map((card, index) => (
                                         <SwiperSlide key={index}>
+                                            <br /><br />
                                             <div className='cards'>
+
                                                 <img src={card.img} class=" img2 " alt="..." />
 
                                                 <div className="info">
-                                                    <Link to={`/card/${card.title}`} state={{ card }} className="button">View Now</Link>
+                                                    <Link to={`/card/${card.title}`} onClick={() => handleLinkClick(`/card/${card.title}`)} state={{ card }} className="button">View Now</Link>
                                                 </div>                                </div>
 
                                         </SwiperSlide>
@@ -703,10 +727,10 @@ const Main = () => {
                                 <div className='col-lg-4  ' style={{
 
                                     marginTop: "-0px"
-                                }} >
+                                }} ><br /><br />
                                     <div className='begins' data-aos="zoom-in-down" data-aos-duration="1000">
                                         <h4 className='text-center'>CROSSROAD</h4>
-                                        <Link to="/crossroad" style={{ listStyle: "none", textDecoration: "none" }}>
+                                        <Link to="/crossroad" onClick={() => handleLinkClick("/crossroad")} style={{ listStyle: "none", textDecoration: "none" }}>
                                             <div className="d-flex align-items-center justify-content-center">
                                                 <button className='shop mx-auto'>Shop Now</button>
                                             </div>

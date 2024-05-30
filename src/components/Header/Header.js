@@ -7,13 +7,13 @@ import { Link } from 'react-router-dom';
 const Header = () => {
   const [showPopup, setShowPopup] = useState(false);
 
-  const handleContactClick = () => {
-    setShowPopup(true);
-  };
+    const handleContactClick = () => {
+        setShowPopup(true);
+    };
 
-  const handleClosePopup = () => {
-    setShowPopup(false);
-  };
+    const handleClosePopup = () => {
+        setShowPopup(false);
+    };
 
   
   const Desktop = ({ children }) => {

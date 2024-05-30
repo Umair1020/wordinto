@@ -1,75 +1,151 @@
 import React from 'react'
 import Header from './Header/Header'
-import { Link } from 'react-router-dom'
-import { Footer } from './Footer'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css/pagination';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import { Footer } from './Footer';
+import { Link , useNavigate } from 'react-router-dom';
+import { useMediaQuery } from 'react-responsive'
 
 const Mid = () => {
+    const navigate = useNavigate();
+    const handleLinkClick = (path) => {
+        navigate(path);
+        window.scrollTo(0, 0);
+    };
+    const Desktop = ({ children }) => {
+        const isDesktop = useMediaQuery({ minWidth: 651 })
+        return isDesktop ? children : null
+    }
+
+    const Mobile = ({ children }) => {
+        const isMobile = useMediaQuery({ maxWidth: 650 })
+        return isMobile ? children : null
+    }
     const middle = [
         {
             img: '/mid7.png',
             title: 'Prelude 81',
-            price: "$3.00",
-            para: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrs standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
-
+            para: 'Please understand that I am dealing with something that I am not ready to discuss. I will share it with you in due time, so please be patient.            ',
+            price: "$3.00"
         },
         {
             img: '/mid3.png',
             title: 'Prelude 65',
-            price: "$3.00",
-            para: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrs standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
-
+            para: 'Your outer beauty initially caught my eye, but over time I discovered your inner beauty, which only enhanced my admiration for you.            ',
+            price: "$3.00"
         },
         {
             img: '/mid6.png',
             title: 'Prelude 6',
-            price: "$3.00",
-            para: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrs standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
-
+            para: 'Expressing love is uncomfortable for me, even though I truly feel it. My upbringing did not include regularly saying those three words.            ',
+            price: "$3.00"
         },
         {
             img: '/mid4.png',
             title: 'Prelude 1',
-            price: "$3.00",
-            para: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrs standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
-
+            para: 'I no longer have romantic feelings for my friend. How can I express this without hurting them? ',
+            price: "$3.00"
         },
 
         {
             img: '/mid1.png',
-            title: 'Prelude 3',
-            price: "$3.00",
-            para: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrs standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
-
+            title: 'Prelude 53',
+            para: 'Despite your insistence that everything is fine, I sense that something is troubling you. Can we freely talk about it?            ',
+            price: "$3.00"
         },
         {
             img: '/mid2.png',
             title: 'Prelude 5',
-            price: "$3.00",
-            para: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrs standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.',
-
+            para: 'Lets keep our disagreements private between us. When we make up, things will be fine, but others you involve may hold on to grudges.',
+            price: "$3.00"
+        },
+        {
+            img: '/mid8.png',
+            title: 'Prelude 40',
+            para: 'What happened to the flowers, the candy, the dates, and most importantly, the romance?            .',
+            price: "$3.00"
         },
     ];
+
     return (
         <div className=' ' style={{ background: "#000" }} >
-            <Header />
-            <div className='beg'> <br />
-                <h2>SHOP BY CATEGORY</h2>
-                <h3>Middle</h3>
-            </div>
-            <div className='row'>
-                {middle.map((card, index) => (
-                    <div className='cards col-lg-3 d-flex justify-content-center mt-1'>
-                        <img src={card.img} class=" img2 " alt="..." />
-                        <div class=" d-flex align-items-center " style={{ position: "absolute", top: "90%" }}>
-                            <h5 class=" text-light mx-5 title text-center">{card.title}</h5>
+            <Desktop>
+                <Header />
+                <div className='beg'> <br />
+                    <h2>SHOP BY CATEGORY</h2>
+                    <h3>Middle</h3>
+                </div>
+                <div className='row'>
+                    {middle.map((card, index) => (
+                        <div className='cards col-lg-3 d-flex justify-content-center mt-1'>
+                            <img src={card.img} class=" img2 " alt="..." />
+                            <div class=" d-flex align-items-center " style={{ position: "absolute", top: "90%" }}>
+                                <h5 class=" text-light mx-5 title text-center">{card.title}</h5>
+                            </div>
+                            <div className="info">
+                                <Link to={`/card/${card.title}`} state={{ card }} className="button">View Now</Link>
+                            </div>
                         </div>
-                        <div className="info">
-                            <Link to={`/card/${card.title}`} state={{ card }} className="button">View Now</Link>
-                        </div>
-                    </div>
-                ))}
-            </div>
-            <Footer />
+                    ))}
+                </div>
+                <Footer />
+            </Desktop>
+            <Mobile>
+                <Header />
+                <div className='beg'> <br />
+                    <h2>SHOP BY CATEGORY</h2>
+                    <h3>Middle</h3>
+                </div>
+                <Swiper
+                    slidesPerView={1}
+                    spaceBetween={20}
+                    style={{
+                        '--swiper-navigation-color': '#fff',
+                    }}
+                    autoplay={{
+                        delay: 2500,
+                        disableOnInteraction: false,
+                    }}
+                    navigation={true}
+                    breakpoints={{
+                        640: {
+                            slidesPerView: 1,
+                            spaceBetween: 20,
+                            price: "$3.00"
+                        },
+                        768: {
+                            slidesPerView: 1,
+                            spaceBetween: 40,
+                            price: "$3.00"
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 50,
+                            price: "$3.00"
+                        },
+                    }}
+                    modules={[Navigation, Pagination]}
+                    className="mySwiper"
+                >
+                    {middle.map((card, index) => (
+                        <SwiperSlide key={index}>
+                            <div className='cards'>
+                                <img src={card.img} class=" img2 " alt="..." />
+                                <div class=" d-flex align-items-center " style={{ position: "absolute", top: "100%" }}>
+                                    <h5 class=" text-light  title text-start">{card.title}</h5>
+                                    {/* <h5 class=" text-light mx-1 title text-center">{card.price}</h5> */}
+                                </div>
+                                <div className="info">
+                                    <Link to={`/card/${card.title}`} onClick={() => handleLinkClick(`/card/${card.title}`)} state={{ card }} className="button">View Now</Link>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+            </Mobile>
         </div>
     )
 }

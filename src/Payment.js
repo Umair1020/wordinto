@@ -53,7 +53,7 @@ const CheckoutForm = ({ card }) => {
       console.error(error);
     } else {
       console.log('Payment method created successfully:', paymentMethod);
-      
+
       // Prepare data to send to the server
       const formData = new FormData(event.target);
       formData.append('stripeToken', paymentMethod.id);
@@ -83,14 +83,102 @@ const CheckoutForm = ({ card }) => {
           <label>Sender's Name</label>
           <input type="text" className="form-control" name="senderName" required />
         </div>
-        <div className="form-group col-lg-6" >
+        <div className="form-group col-lg-6">
           <label>Receiver's Name</label>
           <input type="text" className="form-control" name="receiverName" required />
         </div>
-        <div className="form-group">
+        {/* <div className="form-group">
           <label>Receiver's Email</label>
           <input type="email" className="form-control" name="receiverEmail" required />
-        </div>
+        </div> */}
+        {card.selectedType === 'Physical' ? (
+          <>
+           <div class="col-lg-6 col-sm-12">
+              <label for="inputAddress" class="form-label">Phone Number</label>
+              <input type="number" class="form-control" id="inputAddress" placeholder="+1 434355566" />
+            </div> <br />
+            <div class="col-lg-6 col-sm-12">
+              <label for="inputAddress" class="form-label">Address</label>
+              <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" />
+            </div><br />
+            <div class="col-lg-6 col-sm-12">
+              <label for="inputAddress2" class="form-label">Address 2</label>
+              <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" />
+            </div><br />
+             <div class="col-lg-6 col-sm-12">
+              <label for="inputCity" class="form-label">City</label>
+              <input type="text" class="form-control" id="inputCity" />
+            </div><br />
+              <div class="col-lg-6 col-sm-12">
+              <label for="inputState" class="form-label">State</label>
+              <select id="inputState" class="form-select">
+                <option selected>Choose...</option>
+                <option value="AL">Alabama</option>
+                <option value="AK">Alaska</option>
+                <option value="AZ">Arizona</option>
+                <option value="AR">Arkansas</option>
+                <option value="CA">California</option>
+                <option value="CO">Colorado</option>
+                <option value="CT">Connecticut</option>
+                <option value="DE">Delaware</option>
+                <option value="DC">District Of Columbia</option>
+                <option value="FL">Florida</option>
+                <option value="GA">Georgia</option>
+                <option value="HI">Hawaii</option>
+                <option value="ID">Idaho</option>
+                <option value="IL">Illinois</option>
+                <option value="IN">Indiana</option>
+                <option value="IA">Iowa</option>
+                <option value="KS">Kansas</option>
+                <option value="KY">Kentucky</option>
+                <option value="LA">Louisiana</option>
+                <option value="ME">Maine</option>
+                <option value="MD">Maryland</option>
+                <option value="MA">Massachusetts</option>
+                <option value="MI">Michigan</option>
+                <option value="MN">Minnesota</option>
+                <option value="MS">Mississippi</option>
+                <option value="MO">Missouri</option>
+                <option value="MT">Montana</option>
+                <option value="NE">Nebraska</option>
+                <option value="NV">Nevada</option>
+                <option value="NH">New Hampshire</option>
+                <option value="NJ">New Jersey</option>
+                <option value="NM">New Mexico</option>
+                <option value="NY">New York</option>
+                <option value="NC">North Carolina</option>
+                <option value="ND">North Dakota</option>
+                <option value="OH">Ohio</option>
+                <option value="OK">Oklahoma</option>
+                <option value="OR">Oregon</option>
+                <option value="PA">Pennsylvania</option>
+                <option value="RI">Rhode Island</option>
+                <option value="SC">South Carolina</option>
+                <option value="SD">South Dakota</option>
+                <option value="TN">Tennessee</option>
+                <option value="TX">Texas</option>
+                <option value="UT">Utah</option>
+                <option value="VT">Vermont</option>
+                <option value="VA">Virginia</option>
+                <option value="WA">Washington</option>
+                <option value="WV">West Virginia</option>
+                <option value="WI">Wisconsin</option>
+                <option value="WY">Wyoming</option>
+
+              </select>
+            </div><br />
+            <div class="col-lg-6 col-sm-12">
+              <label for="inputZip" class="form-label">Zip</label>
+              <input type="text" class="form-control" id="inputZip" />
+            </div>
+
+          </>
+        ) : (
+          <div className="form-group">
+            <label>Email Address</label>
+            <input type="email" className="form-control" name="emailAddress" required />
+          </div>
+        )}
         <div className="form-group">
           <label>Card information</label>
           <CardElement className="form-control" />
@@ -102,7 +190,7 @@ const CheckoutForm = ({ card }) => {
         <div className="form-group">
           <label>Country or region</label>
           <select className="form-control" name="country" required>
-            <option value="Pakistan">Pakistan</option>
+
             <option value="United States">United States</option>
             {/* Add other countries as needed */}
           </select>

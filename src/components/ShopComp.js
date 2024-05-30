@@ -13,6 +13,7 @@ const ShopComp = () => {
     const [showValidation, setShowValidation] = useState(false);
 
     const handleBuyNowClick = () => {
+        
         if (!selectedType) {
             setShowValidation(true);
         } else {
@@ -44,7 +45,7 @@ const ShopComp = () => {
                 {card && (
                     <>
                         <div className='col-lg-3 mx-auto'>
-                            <img src={card.img} alt={card.title} />
+                            <img src={card.img} alt={card.title} className='d-flex mx-auto' />
                         </div>
                         <div className='col-lg-6' style={{ marginTop: "100px" }}>
                             <h2>{card.title}</h2>
