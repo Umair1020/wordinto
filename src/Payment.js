@@ -89,7 +89,7 @@ const CheckoutForm = ({ card }) => {
             </div>
             <div className="form-group col-lg-6 col-sm-12 ">
               <label htmlFor="inputPhone" className="form-label">Phone Number</label>
-              <input type="text" className="form-control" id="inputPhone" name="phoneNumber" placeholder="+1 434355566" required />
+              <input type="number" className="form-control" id="inputPhone" name="phoneNumber" placeholder="+1 434355566" required />
             </div>
             <div className="col-lg-6 col-sm-12 mt-2">
               <label htmlFor="inputAddress" className="form-label">Address</label>
