@@ -2,38 +2,33 @@ import React, { useState } from 'react';
 import '../../App.css';
 import Popupcard from "../Popupcard";
 import { useMediaQuery } from 'react-responsive';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Header = () => {
   const [showPopup, setShowPopup] = useState(false);
 
-    const handleContactClick = () => {
-        setShowPopup(true);
-    };
+  const handleContactClick = (e) => {
+    e.preventDefault(); // Prevent the default navigation behavior
+    setShowPopup(true);
+  };
 
-    const handleClosePopup = () => {
-        setShowPopup(false);
-    };
+  const handleClosePopup = () => {
+    setShowPopup(false);
+  };
 
-  
+  const navigate = useNavigate();
   const Desktop = ({ children }) => {
-    const isDesktop = useMediaQuery({ minWidth: 992 })
-    return isDesktop ? children : null
-}
+    const isDesktop = useMediaQuery({ minWidth: 992 });
+    return isDesktop ? children : null;
+  };
 
-const Mobile = ({ children }) => {
-    const isMobile = useMediaQuery({ maxWidth: 767 })
-    return isMobile ? children : null
-}
+  const Mobile = ({ children }) => {
+    const isMobile = useMediaQuery({ maxWidth: 767 });
+    return isMobile ? children : null;
+  };
 
   return (
     <>
-    {/* <Mobile>
- 
-      </Mobile>
-      <Desktop> */}
-
-    
       <header>
         <div className="top-section">
           <img src="/logo.svg" alt="Logo" className="logo d-flex mx-auto" />
@@ -53,7 +48,7 @@ const Mobile = ({ children }) => {
               <li><Link to="/blog">Blog</Link></li>
               <li><Link to="/about">About</Link></li>
               <li className='contact text-dark'>
-                <Link to="#contact" className='text-dark d-flex justify-content-center' onClick={handleContactClick}>Contact</Link>
+                <a href="#contact" className='text-dark d-flex justify-content-center' onClick={handleContactClick}>Contact</a>
               </li>
             </ul>
           </nav>
@@ -61,7 +56,6 @@ const Mobile = ({ children }) => {
           {showPopup && <Popupcard onClose={handleClosePopup} />}
         </div>
       </header>
-      {/* </Desktop> */}
     </>
   );
 };

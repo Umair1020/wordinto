@@ -29,44 +29,51 @@ const Mid = () => {
             img: '/mid7.png',
             title: 'Prelude 81',
             para: 'Please understand that I am dealing with something that I am not ready to discuss. I will share it with you in due time, so please be patient.            ',
-            price: "$3.00"
+            price: "$5.00",
+             note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
         },
         {
             img: '/mid3.png',
             title: 'Prelude 65',
             para: 'Your outer beauty initially caught my eye, but over time I discovered your inner beauty, which only enhanced my admiration for you.            ',
-            price: "$3.00"
+            price: "$5.00",
+             note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
         },
         {
             img: '/mid6.png',
             title: 'Prelude 6',
             para: 'Expressing love is uncomfortable for me, even though I truly feel it. My upbringing did not include regularly saying those three words.            ',
-            price: "$3.00"
+            price: "$5.00",
+             note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
         },
         {
             img: '/mid4.png',
             title: 'Prelude 1',
             para: 'I no longer have romantic feelings for my friend. How can I express this without hurting them? ',
-            price: "$3.00"
+            price: "$5.00",
+             note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
         },
 
         {
             img: '/mid1.png',
             title: 'Prelude 53',
             para: 'Despite your insistence that everything is fine, I sense that something is troubling you. Can we freely talk about it?            ',
-            price: "$3.00"
+            price: "$5.00",
+             note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
         },
         {
             img: '/mid2.png',
             title: 'Prelude 5',
             para: 'Lets keep our disagreements private between us. When we make up, things will be fine, but others you involve may hold on to grudges.',
-            price: "$3.00"
+            price: "$5.00",
+             note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
         },
         {
             img: '/mid8.png',
             title: 'Prelude 40',
             para: 'What happened to the flowers, the candy, the dates, and most importantly, the romance?            .',
-            price: "$3.00"
+            price: "$5.00",
+             note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
         },
     ];
 
@@ -86,7 +93,7 @@ const Mid = () => {
                                 <h5 class=" text-light mx-5 title text-center">{card.title}</h5>
                             </div>
                             <div className="info">
-                                <Link to={`/card/${card.title}`} state={{ card }} className="button">View Now</Link>
+                            <Link to={`/card/${card.title}`} onClick={() => handleLinkClick(`/card/${card.title}`)} state={{ card }} className="button">View Now</Link>
                             </div>
                         </div>
                     ))}
@@ -114,17 +121,20 @@ const Mid = () => {
                         640: {
                             slidesPerView: 1,
                             spaceBetween: 20,
-                            price: "$3.00"
+                            price: "$5.00",
+                             note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
                         },
                         768: {
                             slidesPerView: 1,
                             spaceBetween: 40,
-                            price: "$3.00"
+                            price: "$5.00",
+                             note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
                         },
                         1024: {
                             slidesPerView: 3,
                             spaceBetween: 50,
-                            price: "$3.00"
+                            price: "$5.00",
+                             note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
                         },
                     }}
                     modules={[Navigation, Pagination]}
@@ -134,17 +144,18 @@ const Mid = () => {
                         <SwiperSlide key={index}>
                             <div className='cards'>
                                 <img src={card.img} class=" img2 " alt="..." />
-                                <div class=" d-flex align-items-center " style={{ position: "absolute", top: "100%" }}>
+                                <div class=" d-flex align-items-center " style={{ position: "absolute", top: "90%" }}>
                                     <h5 class=" text-light  title text-start">{card.title}</h5>
                                     {/* <h5 class=" text-light mx-1 title text-center">{card.price}</h5> */}
                                 </div>
                                 <div className="info">
-                                    <Link to={`/card/${card.title}`} onClick={() => handleLinkClick(`/card/${card.title}`)} state={{ card }} className="button">View Now</Link>
+                                <Link to={`/card/${card.title}`} onClick={() => handleLinkClick(`/card/${card.title}`)} state={{ card }} className="button">View Now</Link>
                                 </div>
                             </div>
                         </SwiperSlide>
                     ))}
                 </Swiper>
+                <Footer />
             </Mobile>
         </div>
     )

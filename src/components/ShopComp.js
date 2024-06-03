@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import Header from './Header/Header';
 import { useLocation } from 'react-router-dom';
 import { Footer } from './Footer';
@@ -13,16 +13,17 @@ const ShopComp = () => {
     const [showValidation, setShowValidation] = useState(false);
 
     const handleBuyNowClick = () => {
-        
+
         if (!selectedType) {
             setShowValidation(true);
         } else {
             setShowValidation(false);
-            const updatedCard = { 
-                ...card, 
-                price: selectedType === 'Physical' ? '$8.00' : '$3.00',
+            const updatedCard = {
+                ...card,
+                price: selectedType === 'Physical' ? '$8.00' : '$5.00',
                 selectedType: selectedType
             };
+
             navigate('/payment', { state: { card: updatedCard } });
         }
     };
@@ -41,17 +42,18 @@ const ShopComp = () => {
 
             {showValidation && <p className='text-light text-center'>Please select one option before proceeding.</p>}
 
-            <div className="row text-light mx-auto">
+            <div className="row text-light  ">
                 {card && (
                     <>
-                        <div className='col-lg-3 mx-auto'>
-                            <img src={card.img} alt={card.title} className='d-flex mx-auto' />
+                        <div className='col-lg-4 mx-auto'>
+                            <img src={card.img} alt={card.title} className=' w-100' />
                         </div>
-                        <div className='col-lg-6' style={{ marginTop: "100px" }}>
+                        <div className='col-lg-6 carddesc' >
                             <h2>{card.title}</h2>
-                            <p className='w-75'>{card.para}</p>
-                            <div className='d-flex align-items-center'>
-                                <h5 className="text-light title text-center">{selectedType === 'Physical' ? '$8.00' : '$3.00'}</h5>
+                            <p className=''>{card.para}</p>
+                            <p className=''>{card.note}</p>
+                            <div className='d-flex align-items-center descparent'>
+                                <h5 className="text-light title text-center">{selectedType === 'Physical' ? '$8.00' : '$5.00'}</h5>
                                 <button className="button mx-5" onClick={handleBuyNowClick}>Buy Now</button>
                             </div>
                         </div>

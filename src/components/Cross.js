@@ -29,37 +29,43 @@ const Cross = () => {
             img: '/cross1.png',
             title: 'Prelude 53',
             para: 'Despite your insistence that everything is fine, I sense that something is troubling you. Can we freely talk about it?            ',
-            price: "$3.00"
+            price: "$5.00",
+             note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
         },
         {
             img: '/cross4.png',
             title: 'Prelude 99',
             para: 'It’s better that we break all ties with one another. Move on with your life!           ',
-            price: "$3.00"
+            price: "$5.00",
+             note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
         },
         {
             img: '/cross3.png',
             title: 'Prelude 2',
             para: 'I am receiving conflicting messages from you. One day you show affection by kissing and holding me, and the next you claim you are not looking to pursue a relationship with me.            ',
-            price: "$3.00"
+            price: "$5.00",
+             note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
         },
         {
             img: '/cross5.png',
             title: 'Prelude 15',
             para: 'All the indications suggest that you are being unfaithful to me.',
-            price: "$3.00"
+            price: "$5.00",
+             note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
         },
         {
             img: '/cross6.png',
             title: 'Prelude 16',
             para: 'The approaching wedding day has me concerned about the warning signs I ve noticed. Throughout our relationship, it has become clear that we are not well-matched. I believe we should see other people before making any permanent decisions.            ',
-            price: "$3.00"
+            price: "$5.00",
+             note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
         },
         {
             img: '/cross7.png',
             title: 'Prelude 24',
             para: 'I am unable to move past the fact that you cheated on me. Despite our efforts to fix things, I find it hard to trust you. Therefore, in order to spare you from my lack of trust, I have made the decision to leave.            ',
-            price: "$3.00"
+            price: "$5.00",
+             note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
         },
     ];
     return (
@@ -109,17 +115,20 @@ const Cross = () => {
                             640: {
                                 slidesPerView: 1,
                                 spaceBetween: 20,
-                                price: "$3.00"
+                                price: "$5.00",
+                                 note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
                             },
                             768: {
                                 slidesPerView: 1,
                                 spaceBetween: 40,
-                                price: "$3.00"
+                                price: "$5.00",
+                                 note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
                             },
                             1024: {
                                 slidesPerView: 3,
                                 spaceBetween: 50,
-                                price: "$3.00"
+                                price: "$5.00",
+                                 note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
                             },
                         }}
                         modules={[Navigation, Pagination]}
@@ -142,6 +151,7 @@ const Cross = () => {
                         ))}
                     </Swiper>
                 </div>
+                <Footer />
             </Mobile>
         </div>
     )

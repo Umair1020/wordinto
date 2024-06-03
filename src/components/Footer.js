@@ -1,19 +1,21 @@
 import { useState } from "react"
 import "../App.css"
-import { Link } from "react-router-dom";
+import { Link , useNavigate } from "react-router-dom";
 import Popupcard from "./Popupcard";
 
 export const Footer = () => {
     const [showPopup, setShowPopup] = useState(false);
-
+    const navigate = useNavigate();
     const handleContactClick = () => {
         setShowPopup(true);
     };
-
     const handleClosePopup = () => {
         setShowPopup(false);
     };
-
+    const handleLinkClick = (path) => {
+        navigate(path);
+        window.scrollTo(0, 0);
+    };
     return (
         <div><br />
             <footer class="footer">
@@ -24,19 +26,19 @@ export const Footer = () => {
                             <div className='col-lg-3 mx-2'><p>Hampton USA <br />
                                 jessaword@gmail.com<br />
                                 (757) 998-1315</p></div>
-                            <div className='col-lg-8 mx-3'>  <nav className="navbars" style={{}}>
+                            <div className='col-lg-8 col-sm-12 text-start'>  <nav className="navbars" style={{}}>
                                 <ul className=' ul mt-3'>
-                                    <li className='mx-2'><a href="/">Home</a></li>
-                                    <li className='mx-2'><a href="/about">About</a></li>
-                                    <li className='mx-2'><a href="/shop">Shop</a></li>
-                                    <li className='mx-2'><a href="/blog">Blog</a></li>
+                                    <li className='mx-2'><Link to="/"  onClick={() => handleLinkClick("/")}>Home</Link></li>
+                                    <li className='mx-2'><Link to="/about"  onClick={() => handleLinkClick("/about")}>About</Link></li>
+                                    <li className='mx-2'><Link to="/shop"  onClick={() => handleLinkClick("/shop")}>Shop</Link></li>
+                                    <li className='mx-2'><Link to="/blog"  onClick={() => handleLinkClick("/blog")}>Blog</Link></li>
                                     <li className='mx-2'>
                                         <Link to="#contact" className=' d-flex justify-content-center' onClick={handleContactClick}>Contact</Link>
                                     </li>
                                 </ul>
                             </nav>
-
-                                {showPopup && <Popupcard onClose={handleClosePopup} />}</div>
+                                {showPopup && <Popupcard onClose={handleClosePopup} />}
+                                </div>
                         </div>
                     </div>
                 </div>

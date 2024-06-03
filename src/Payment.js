@@ -80,7 +80,7 @@ const CheckoutForm = ({ card }) => {
       <input type="hidden" className="form-control" name="amount" value={card.price} required />
       <input type="hidden" className="form-control" name="selectedType" value={card.selectedType} required />
       <div className='row'>
-        <div className="form-group w-50 col-lg-6">
+        <div className="form-group col-lg-6 col-sm-12">
           <label>Sender's Name</label>
           <input type="text" className="form-control" name="senderName" required />
         </div>
@@ -88,32 +88,28 @@ const CheckoutForm = ({ card }) => {
           <label>Receiver's Name</label>
           <input type="text" className="form-control" name="receiverName" required />
         </div>
-        {/* <div className="form-group">
-          <label>Receiver's Email</label>
-          <input type="email" className="form-control" name="receiverEmail" required />
-        </div> */}
         {card.selectedType === 'Physical' ? (
           <>
-           <div class="col-lg-6 col-sm-12">
-              <label for="inputAddress" class="form-label">Phone Number</label>
-              <input type="number" class="form-control" id="inputAddress" placeholder="+1 434355566" />
-            </div> <br />
-            <div class="col-lg-6 col-sm-12">
-              <label for="inputAddress" class="form-label">Address</label>
-              <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" />
-            </div><br />
-            <div class="col-lg-6 col-sm-12">
-              <label for="inputAddress2" class="form-label">Address 2</label>
-              <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" />
-            </div><br />
-             <div class="col-lg-6 col-sm-12">
-              <label for="inputCity" class="form-label">City</label>
-              <input type="text" class="form-control" id="inputCity" />
-            </div><br />
-              <div class="col-lg-6 col-sm-12">
-              <label for="inputState" class="form-label">State</label>
-              <select id="inputState" class="form-select">
-                <option selected>Choose...</option>
+            <div className="col-lg-6 col-sm-12 mt-2">
+              <label htmlFor="inputPhone" className="form-label">Phone Number</label>
+              <input type="text" className="form-control" id="inputPhone" name="phoneNumber" placeholder="+1 434355566" required />
+            </div>
+            <div className="col-lg-6 col-sm-12 mt-2">
+              <label htmlFor="inputAddress" className="form-label">Address</label>
+              <input type="text" className="form-control" id="inputAddress" name="address" placeholder="1234 Main St" required />
+            </div>
+            <div className="col-lg-6 col-sm-12 mt-2">
+              <label htmlFor="inputAddress2" className="form-label">Address 2</label>
+              <input type="text" className="form-control" id="inputAddress2" name="address2" placeholder="Apartment, studio, or floor" />
+            </div>
+            <div className="col-lg-6 col-sm-12 mt-2">
+              <label htmlFor="inputCity" className="form-label">City</label>
+              <input type="text" className="form-control" id="inputCity" name="city" required />
+            </div>
+            <div className="col-lg-6 col-sm-12 mt-2">
+              <label htmlFor="inputState" className="form-label">State</label>
+              <select id="inputState" className="form-select form-control" name="state" required>
+                <option value="">Choose...</option>
                 <option value="AL">Alabama</option>
                 <option value="AK">Alaska</option>
                 <option value="AZ">Arizona</option>
@@ -165,38 +161,50 @@ const CheckoutForm = ({ card }) => {
                 <option value="WV">West Virginia</option>
                 <option value="WI">Wisconsin</option>
                 <option value="WY">Wyoming</option>
-
               </select>
-            </div><br />
-            <div class="col-lg-6 col-sm-12">
-              <label for="inputZip" class="form-label">Zip</label>
-              <input type="text" class="form-control" id="inputZip" />
             </div>
-
+            <div className="col-lg-6 col-sm-12 mt-2">
+              <label htmlFor="inputZip" className="form-label">Zip</label>
+              <input type="text" className="form-control" id="inputZip" name="zip" required />
+            </div>
           </>
         ) : (
-          <div className="form-group">
+          <div className="form-group mt-2">
             <label>Email Address</label>
             <input type="email" className="form-control" name="emailAddress" required />
           </div>
         )}
-        <div className="form-group">
+        <div className="form-group mt-2">
           <label>Card information</label>
-          <CardElement className="form-control" />
+          <CardElement className="form-control" options={{
+            style: {
+              base: {
+                fontSize: '16px',
+                color: '#32325d',
+                '::placeholder': {
+                  color: '#aab7c4',
+                },
+              },
+              invalid: {
+                color: '#fa755a',
+                iconColor: '#fa755a',
+              },
+            },
+            hidePostalCode: true,
+          }} />
         </div>
-        <div className="form-group">
+        <div className="form-group mt-2">
           <label>Cardholder name</label>
           <input type="text" className="form-control" name="cardholderName" required />
         </div>
-        <div className="form-group">
+        <div className="form-group mt-2">
           <label>Country or region</label>
           <select className="form-control" name="country" required>
-            <option value="Pakistan">Pakistan</option>
             <option value="United States">United States</option>
             {/* Add other countries as needed */}
           </select>
         </div>
-        <div className="form-group">
+        <div className="form-group d-flex mt-2">
           <input type="checkbox" className="form-check-input" />
           <label className='mx-2'>Securely save my information for 1-click checkout</label>
         </div>

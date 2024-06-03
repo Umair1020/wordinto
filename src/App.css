@@ -1080,14 +1080,48 @@ form input[type=submit] {
   margin-bottom: 0;
   list-style: none;
 }
-
+.carddesc{
+  margin-top: 100px;
+  width: 50%;
+  text-align: start;
+}
+.carddesc p{
+  width: 70%;
+}
 @media (max-width: 991px) {
   .middle-section h2 {
-    font-size: 60px;
+    font-size: 40px;
     font-weight: 800;
-    line-height: 70px;
+    line-height: 50px;
   }
-
+  .descparent{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+.carddesc{
+  margin-top: 0;
+  text-align: center;
+  width: 100%;
+}
+.carddesc p{
+  width: 80%;
+  text-align: center;
+  margin: auto;
+  margin-top: 10px;
+}
+.descparent{
+  margin-top: 20px;
+}
+.payment-form{
+  width: 100%;
+}
+.payment-page{
+  display: block;
+}
+.product-info{
+  width: 100%;
+}
   .video-section {
     position: relative;
     width: 100%;
@@ -1098,11 +1132,11 @@ form input[type=submit] {
   }
 
   .middle-section {
-    margin-top: 15px;
+    margin-top: 0px;
   }
 
   .cards {
-    height: 60vh;
+    height: 65vh;
     border-radius: 15px;
     padding: 1.5rem;
     position: relative;
@@ -1125,7 +1159,9 @@ form input[type=submit] {
     width: 90%;
     margin: auto;
   }
-
+  ol, ul {
+    padding-left: 0rem;
+}
   .begin {
     border: 1px solid #D67587;
     border-radius: 10px;
