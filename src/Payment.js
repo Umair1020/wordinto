@@ -80,17 +80,14 @@ const CheckoutForm = ({ card }) => {
       <input type="hidden" className="form-control" name="amount" value={card.price} required />
       <input type="hidden" className="form-control" name="selectedType" value={card.selectedType} required />
       <div className='row'>
-        <div className="form-group col-lg-6 col-sm-12">
-          <label>Sender's Name</label>
-          <input type="text" className="form-control" name="senderName" required />
-        </div>
-        <div className="form-group col-lg-6">
-          <label>Receiver's Name</label>
-          <input type="text" className="form-control" name="receiverName" required />
-        </div>
+
         {card.selectedType === 'Physical' ? (
           <>
-            <div className="col-lg-6 col-sm-12 mt-2">
+            <div className="form-group col-lg-6 col-sm-12 ">
+              <label className="form-label"> Name</label>
+              <input type="text" className="form-control" name="senderName" required />
+            </div>
+            <div className="form-group col-lg-6 col-sm-12 ">
               <label htmlFor="inputPhone" className="form-label">Phone Number</label>
               <input type="text" className="form-control" id="inputPhone" name="phoneNumber" placeholder="+1 434355566" required />
             </div>
@@ -106,7 +103,7 @@ const CheckoutForm = ({ card }) => {
               <label htmlFor="inputCity" className="form-label">City</label>
               <input type="text" className="form-control" id="inputCity" name="city" required />
             </div>
-            <div className="col-lg-6 col-sm-12 mt-2">
+            <div className="col-lg-4 col-sm-12 mt-2">
               <label htmlFor="inputState" className="form-label">State</label>
               <select id="inputState" className="form-select form-control" name="state" required>
                 <option value="">Choose...</option>
@@ -163,16 +160,26 @@ const CheckoutForm = ({ card }) => {
                 <option value="WY">Wyoming</option>
               </select>
             </div>
-            <div className="col-lg-6 col-sm-12 mt-2">
+            <div className="col-lg-2 col-sm-12 mt-2">
               <label htmlFor="inputZip" className="form-label">Zip</label>
               <input type="text" className="form-control" id="inputZip" name="zip" required />
             </div>
           </>
         ) : (
-          <div className="form-group mt-2">
-            <label>Email Address</label>
-            <input type="email" className="form-control" name="emailAddress" required />
-          </div>
+          <> 
+            <div className="form-group col-lg-6 col-sm-12">
+              <label>Sender Name</label>
+              <input type="text" className="form-control" name="sendername" required />
+            </div>
+            <div className="form-group col-lg-6 col-sm-12">
+              <label>Receiver Name</label>
+              <input type="text" className="form-control" name="receiverName" required />
+            </div>
+            <div className="form-group mt-2">
+              <label> Receiver Email Address</label>
+              <input type="email" className="form-control" name="emailAddress" required />
+            </div>
+          </>
         )}
         <div className="form-group mt-2">
           <label>Card information</label>
