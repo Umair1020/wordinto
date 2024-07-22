@@ -8,6 +8,7 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { Footer } from './Footer';
 import { Link , useNavigate } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive'
+import { Helmet } from 'react-helmet';
 
 const Mid = () => {
     const navigate = useNavigate();
@@ -27,58 +28,61 @@ const Mid = () => {
     const middle = [
         {
             img: '/mid7.png',
-            title: 'Prelude 81',
+            title: 'Prelude 81 (Unisex)',
             para: 'Please understand that I am dealing with something that I am not ready to discuss. I will share it with you in due time, so please be patient.            ',
-            price: "$5.00",
-             note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
+            price: "$6.00",
+             note: "Note: The description provided does not reflect the actual content of the card, it merely describes what is contained inside."
         },
         {
             img: '/mid3.png',
-            title: 'Prelude 65',
+            title: 'Prelude 65  (Male)',
             para: 'Your outer beauty initially caught my eye, but over time I discovered your inner beauty, which only enhanced my admiration for you.            ',
-            price: "$5.00",
-             note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
+            price: "$6.00",
+             note: "Note: The description provided does not reflect the actual content of the card, it merely describes what is contained inside."
         },
         {
             img: '/mid6.png',
-            title: 'Prelude 6',
+            title: 'Prelude 6 (Unisex)',
             para: 'Expressing love is uncomfortable for me, even though I truly feel it. My upbringing did not include regularly saying those three words.            ',
-            price: "$5.00",
-             note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
+            price: "$6.00",
+             note: "Note: The description provided does not reflect the actual content of the card, it merely describes what is contained inside."
         },
         {
             img: '/mid4.png',
-            title: 'Prelude 1',
+            title: 'Prelude 1 (Unisex)',
             para: 'I no longer have romantic feelings for my friend. How can I express this without hurting them? ',
-            price: "$5.00",
-             note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
+            price: "$6.00",
+             note: "Note: The description provided does not reflect the actual content of the card, it merely describes what is contained inside."
         },
 
         {
             img: '/mid1.png',
-            title: 'Prelude 53',
+            title: 'Prelude 53 (Male)',
             para: 'Despite your insistence that everything is fine, I sense that something is troubling you. Can we freely talk about it?            ',
-            price: "$5.00",
-             note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
+            price: "$6.00",
+             note: "Note: The description provided does not reflect the actual content of the card, it merely describes what is contained inside."
         },
         {
             img: '/mid2.png',
-            title: 'Prelude 5',
+            title: 'Prelude 5 (Unisex)',
             para: 'Lets keep our disagreements private between us. When we make up, things will be fine, but others you involve may hold on to grudges.',
-            price: "$5.00",
-             note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
+            price: "$6.00",
+             note: "Note: The description provided does not reflect the actual content of the card, it merely describes what is contained inside."
         },
         {
             img: '/mid8.png',
-            title: 'Prelude 40',
+            title: 'Prelude 40 (Female)',
             para: 'What happened to the flowers, the candy, the dates, and most importantly, the romance?            .',
-            price: "$5.00",
-             note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
+            price: "$6.00",
+             note: "Note: The description provided does not reflect the actual content of the card, it merely describes what is contained inside."
         },
     ];
 
     return (
         <div className=' ' style={{ background: "#000" }} >
+              <Helmet>
+        <title>Into Words - Middle</title>
+      </Helmet>
             <Desktop>
                 <Header />
                 <div className='beg'> <br />
@@ -121,20 +125,20 @@ const Mid = () => {
                         640: {
                             slidesPerView: 1,
                             spaceBetween: 20,
-                            price: "$5.00",
-                             note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
+                            price: "6.00",
+                             note: "Note: The description provided does not reflect the actual content of the card, it merely describes what is contained inside."
                         },
                         768: {
                             slidesPerView: 1,
                             spaceBetween: 40,
-                            price: "$5.00",
-                             note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
+                            price: "6.00",
+                             note: "Note: The description provided does not reflect the actual content of the card, it merely describes what is contained inside."
                         },
                         1024: {
                             slidesPerView: 3,
                             spaceBetween: 50,
-                            price: "$5.00",
-                             note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
+                            price: "6.00",
+                             note: "Note: The description provided does not reflect the actual content of the card, it merely describes what is contained inside."
                         },
                     }}
                     modules={[Navigation, Pagination]}

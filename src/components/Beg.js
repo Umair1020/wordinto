@@ -6,6 +6,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { Footer } from './Footer';
+import { Helmet } from 'react-helmet';
 import { Link , useNavigate } from 'react-router-dom';
 
 const Beg = () => {
@@ -17,24 +18,24 @@ const Beg = () => {
     const cards = [
         {
             img: '/beg1.png',
-            title: 'Prelude 8',
+            title: 'Prelude 8 (Male)',
             para: 'I hope that my honesty doesn’t offend you, but you wear too much makeup. There’s nothing wrong with enhancing yourself, but your natural beauty is more radiant. Whenever I hug you, I get smudges on my shirt, and every time I kiss you, I have to wipe my lips because of the lipstick.            ',
-            price: "$5.00",
-             note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
+            price: "$6.00",
+             note: "Note: The description provided does not reflect the actual content of the card, it merely describes what is contained inside."
         },
         {
             img: '/beg2.png',
-            title: 'Prelude 4',
+            title: 'Prelude 4 (Female)',
             para: 'You were not dishonest. Although you did send me a text, you did not actually hit the "send" button. Additionally, you did try to call me, but the phone only rang once before you ended the call.            If you dont want to be with me be honest by telling me plainly.',
-            price: "$5.00",
-             note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
+            price: "$6.00",
+             note: "Note: The description provided does not reflect the actual content of the card, it merely describes what is contained inside."
         },
         {
             img: '/beg4.png',
-            title: 'Just Curious',
+            title: 'Just Curious (Male)',
             para: 'I would like to get to know you more, but without any pressure            .',
-            price: "$5.00",
-             note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
+            price: "$6.00",
+             note: "Note: The description provided does not reflect the actual content of the card, it merely describes what is contained inside."
         },
 
     ];
@@ -98,6 +99,9 @@ const Beg = () => {
     return (
         <>
             <div className=' ' style={{ background: "#000" }} >
+            <Helmet>
+        <title>Into Words - Beginning</title>
+      </Helmet>
                 <Header />
                 <div className='beg'> <br />
                     <h2>SHOP BY CATEGORY</h2>
@@ -120,20 +124,20 @@ const Beg = () => {
                             640: {
                                 slidesPerView: 1,
                                 spaceBetween: 20,
-                                price: "$5.00",
-                                 note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
+                                price: "$6.00",
+                                 note: "Note: The description provided does not reflect the actual content of the card, it merely describes what is contained inside."
                             },
                             768: {
                                 slidesPerView: 1,
                                 spaceBetween: 40,
-                                price: "$5.00",
-                                 note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
+                                price: "$6.00",
+                                 note: "Note: The description provided does not reflect the actual content of the card, it merely describes what is contained inside."
                             },
                             1024: {
                                 slidesPerView: 3,
                                 spaceBetween: 50,
-                                price: "$5.00",
-                                 note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
+                                price: "$6.00",
+                                 note: "Note: The description provided does not reflect the actual content of the card, it merely describes what is contained inside."
                             },
                         }}
                         modules={[Navigation, Pagination]}

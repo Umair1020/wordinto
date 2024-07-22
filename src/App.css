@@ -1072,7 +1072,10 @@ form input[type=submit] {
   font-family: Poiret One;
   font-size: 30px;
 }
-
+.cards h6 {
+  font-family: Poiret One;
+  font-size: 25px;
+}
 .navbar-nav {
   display: flex;
   flex-direction: row !important;
@@ -1125,7 +1128,7 @@ form input[type=submit] {
   .video-section {
     position: relative;
     width: 100%;
-    height: 75vh;
+    height: auto;
     overflow-y: scroll/auto;
     overflow-x: visible;
     border: none !important;

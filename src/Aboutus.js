@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from './components/Header/Header'
 import { Footer } from './components/Footer'
+import { Helmet } from 'react-helmet';
 import { useMediaQuery } from 'react-responsive'
 const Aboutus = () => {
     const Desktop = ({ children }) => {
@@ -15,6 +16,9 @@ const Aboutus = () => {
 
     return (
         <div style={{ background: "#000" }}>
+             <Helmet>
+        <title>Into Words - About</title>
+      </Helmet>
             <Desktop>
                 <Header />
                 <div className='beg'> <br />

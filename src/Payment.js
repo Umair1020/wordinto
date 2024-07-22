@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { loadStripe } from '@stripe/stripe-js';
+import { Helmet } from 'react-helmet';
 import { Elements, CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import axios from 'axios';
 
@@ -12,6 +13,9 @@ const PaymentPage = () => {
   const { card } = location.state || {};
   return (
     <div className="payment-page">
+       <Helmet>
+                    <title>Into Words - Payment</title>
+                </Helmet>
       <div className="product-info">
         <img src={card.img} alt={card.title} />
         <h2>{card.title}</h2>

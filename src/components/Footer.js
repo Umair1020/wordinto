@@ -23,9 +23,8 @@ export const Footer = () => {
                     <div class="row  ">
                         <h2 className='text-light fw-bold word '>INTO WORDS</h2>
                         <div className='mainfooter align-items-center'>
-                            <div className='col-lg-3 mx-2'><p>Hampton USA <br />
-                                jessaword@gmail.com<br />
-                                (757) 998-1315</p></div>
+                            <div className='col-lg-3 mx-2'><p>
+                            support@intowordsgc.com</p></div>
                             <div className='col-lg-8 col-sm-12 text-start'>  <nav className="navbars" style={{}}>
                                 <ul className=' ul mt-3'>
                                     <li className='mx-2'><Link to="/"  onClick={() => handleLinkClick("/")}>Home</Link></li>

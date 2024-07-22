@@ -11,11 +11,10 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import 'aos/dist/aos.css';
-import { Link , useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Footer } from './Footer';
 
 AOS.init();
-
 
 const Main = () => {
     const navigate = useNavigate();
@@ -26,121 +25,121 @@ const Main = () => {
     const cards = [
         {
             img: '/beg1.png',
-            title: 'Prelude 8',
+            title: 'Prelude 8 (Male)',
             para: 'I hope that my honesty doesn’t offend you, but you wear too much makeup. There’s nothing wrong with enhancing yourself, but your natural beauty is more radiant. Whenever I hug you, I get smudges on my shirt, and every time I kiss you, I have to wipe my lips because of the lipstick.            ',
-            price: "$5.00",
-            note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
+            price: "$6.00",
+            note: "Note: The description provided does not reflect the actual content of the card, it merely describes what is contained inside."
         },
         {
             img: '/beg2.png',
-            title: 'Prelude 4',
+            title: 'Prelude 4 (Female)',
             para: 'You were not dishonest. Although you did send me a text, you did not actually hit the "send" button. Additionally, you did try to call me, but the phone only rang once before you ended the call.            If you dont want to be with me be honest by telling me plainly.',
-            price: "$5.00",
-            note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
+            price: "$6.00",
+            note: "Note: The description provided does not reflect the actual content of the card, it merely describes what is contained inside."
         },
         {
             img: '/beg4.png',
-            title: 'Just Curious',
+            title: 'Just Curious (Male)',
             para: 'I would like to get to know you more, but without any pressure            .',
-            price: "$5.00",
-            note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
+            price: "$6.00",
+            note: "Note: The description provided does not reflect the actual content of the card, it merely describes what is contained inside."
         },
 
     ];
     const middle = [
         {
             img: '/mid7.png',
-            title: 'Prelude 81',
+            title: 'Prelude 81 (Unisex)',
             para: 'Please understand that I am dealing with something that I am not ready to discuss. I will share it with you in due time, so please be patient.            ',
-            price: "$5.00",
-            note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
+            price: "$6.00",
+            note: "Note: The description provided does not reflect the actual content of the card, it merely describes what is contained inside."
         },
         {
             img: '/mid3.png',
-            title: 'Prelude 65',
+            title: 'Prelude 65  (Male)',
             para: 'Your outer beauty initially caught my eye, but over time I discovered your inner beauty, which only enhanced my admiration for you.            ',
-            price: "$5.00",
-            note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
+            price: "$6.00",
+            note: "Note: The description provided does not reflect the actual content of the card, it merely describes what is contained inside."
         },
         {
             img: '/mid6.png',
-            title: 'Prelude 6',
+            title: 'Prelude 6 (Unisex)',
             para: 'Expressing love is uncomfortable for me, even though I truly feel it. My upbringing did not include regularly saying those three words.            ',
-            price: "$5.00",
-            note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
+            price: "$6.00",
+            note: "Note: The description provided does not reflect the actual content of the card, it merely describes what is contained inside."
         },
         {
             img: '/mid4.png',
-            title: 'Prelude 1',
+            title: 'Prelude 1 (Unisex)',
             para: 'I no longer have romantic feelings for my friend. How can I express this without hurting them? ',
-            price: "$5.00",
-            note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
+            price: "$6.00",
+            note: "Note: The description provided does not reflect the actual content of the card, it merely describes what is contained inside."
         },
 
         {
             img: '/mid1.png',
-            title: 'Prelude 53',
+            title: 'Prelude 53 (Male)',
             para: 'Despite your insistence that everything is fine, I sense that something is troubling you. Can we freely talk about it?            ',
-            price: "$5.00",
-            note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
+            price: "$6.00",
+            note: "Note: The description provided does not reflect the actual content of the card, it merely describes what is contained inside."
         },
         {
             img: '/mid2.png',
-            title: 'Prelude 5',
+            title: 'Prelude 5 (Unisex)',
             para: 'Lets keep our disagreements private between us. When we make up, things will be fine, but others you involve may hold on to grudges.',
-            price: "$5.00",
-            note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
+            price: "$6.00",
+            note: "Note: The description provided does not reflect the actual content of the card, it merely describes what is contained inside."
         },
         {
             img: '/mid8.png',
-            title: 'Prelude 40',
+            title: 'Prelude 40 (Female)',
             para: 'What happened to the flowers, the candy, the dates, and most importantly, the romance?            .',
-            price: "$5.00",
-            note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
+            price: "$6.00",
+            note: "Note: The description provided does not reflect the actual content of the card, it merely describes what is contained inside."
         },
     ];
     const cross = [
         {
             img: '/cross1.png',
-            title: 'Prelude 53',
+            title: 'Prelude 53 (Male)',
             para: 'Despite your insistence that everything is fine, I sense that something is troubling you. Can we freely talk about it?            ',
-            price: "$5.00",
-            note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
+            price: "$6.00",
+            note: "Note: The description provided does not reflect the actual content of the card, it merely describes what is contained inside."
         },
         {
             img: '/cross4.png',
-            title: 'Prelude 99',
+            title: 'Prelude 99 (Unisex)',
             para: 'It’s better that we break all ties with one another. Move on with your life!           ',
-            price: "$5.00",
-            note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
+            price: "$6.00",
+            note: "Note: The description provided does not reflect the actual content of the card, it merely describes what is contained inside."
         },
         {
             img: '/cross3.png',
-            title: 'Prelude 2',
+            title: 'Prelude 2 (Female)',
             para: 'I am receiving conflicting messages from you. One day you show affection by kissing and holding me, and the next you claim you are not looking to pursue a relationship with me.            ',
-            price: "$5.00",
-            note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
+            price: "$6.00",
+            note: "Note: The description provided does not reflect the actual content of the card, it merely describes what is contained inside."
         },
         {
             img: '/cross5.png',
-            title: 'Prelude 15',
+            title: 'Prelude 15 (Female)',
             para: 'All the indications suggest that you are being unfaithful to me.',
-            price: "$5.00",
-            note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
+            price: "$6.00",
+            note: "Note: The description provided does not reflect the actual content of the card, it merely describes what is contained inside."
         },
         {
             img: '/cross6.png',
-            title: 'Prelude 16',
+            title: 'Prelude 16 (Unisex)',
             para: 'The approaching wedding day has me concerned about the warning signs I ve noticed. Throughout our relationship, it has become clear that we are not well-matched. I believe we should see other people before making any permanent decisions.            ',
-            price: "$5.00",
-            note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
+            price: "$6.00",
+            note: "Note: The description provided does not reflect the actual content of the card, it merely describes what is contained inside."
         },
         {
             img: '/cross7.png',
-            title: 'Prelude 24',
+            title: 'Prelude 24 (Unisex)',
             para: 'I am unable to move past the fact that you cheated on me. Despite our efforts to fix things, I find it hard to trust you. Therefore, in order to spare you from my lack of trust, I have made the decision to leave.            ',
-            price: "$5.00",
-            note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
+            price: "$6.00",
+            note: "Note: The description provided does not reflect the actual content of the card, it merely describes what is contained inside."
         },
     ];
     // useEffect(() => {
@@ -299,7 +298,7 @@ const Main = () => {
                                 <br /><br /><br /><br />
                                 <div className="middle-section">
                                     <h2>INTO WORDS</h2>
-                                    <button className="button">Greeting Cards</button>
+                                   <Link to="/shop"> <button className="button">Greeting Cards</button></Link>
                                 </div>
                             </div>
                         </section>
@@ -454,7 +453,7 @@ const Main = () => {
                                 }} >
                                     <div className='begins' data-aos="zoom-in-down" data-aos-duration="1000">
                                         <h4 className='text-center'>CROSSROAD</h4>
-                                        <Link to="/crossroad"  onClick={() => handleLinkClick(`/crossroad`)} style={{ listStyle: "none", textDecoration: "none" }}>
+                                        <Link to="/crossroad" onClick={() => handleLinkClick(`/crossroad`)} style={{ listStyle: "none", textDecoration: "none" }}>
                                             <div className="d-flex align-items-center justify-content-center">
                                                 <button className='shop mx-auto'>Shop Now</button>
                                             </div>
@@ -481,7 +480,7 @@ const Main = () => {
                         </section>
                     </figure>
                 </div>
-                    {/* <Footer /> */}
+                {/* <Footer /> */}
             </Desktop>
             <Mobile>
                 <div className='bg-dark' style={{ backgroundColor: "#111111", height: "auto" }}>
@@ -494,8 +493,8 @@ const Main = () => {
         </video> */}
                             <img
                                 id="second-img"
-                                src="/banner.png"
-                                className='w-100 ' style={{ height: "70vh" }}
+                                src="/banner2.png"
+                                className='w-100 '
                             />
                             <div className="overlay">
                                 <br />
@@ -526,20 +525,20 @@ const Main = () => {
                                         640: {
                                             slidesPerView: 1,
                                             spaceBetween: 20,
-                                            price: "$5.00",
-                                            note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
+                                            price: "$6.00",
+                                            note: "Note: The description provided does not reflect the actual content of the card, it merely describes what is contained inside."
                                         },
                                         768: {
                                             slidesPerView: 1,
                                             spaceBetween: 40,
-                                            price: "$5.00",
-                                            note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
+                                            price: "$6.00",
+                                            note: "Note: The description provided does not reflect the actual content of the card, it merely describes what is contained inside."
                                         },
                                         1024: {
                                             slidesPerView: 3,
                                             spaceBetween: 50,
-                                            price: "$5.00",
-                                            note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
+                                            price: "$6.00",
+                                            note: "Note: The description provided does not reflect the actual content of the card, it merely describes what is contained inside."
                                         },
                                     }}
                                     modules={[Navigation, Pagination]}
@@ -547,12 +546,12 @@ const Main = () => {
                                 >
                                     {cards.map((card, index) => (
                                         <SwiperSlide key={index}>
-                                               
+
                                             <div className='cards'>
                                                 <img src={card.img} class=" img2 " alt="..." />
 
                                                 <div className="info">
-                                                   <Link to={`/card/${card.title}`} onClick={() => handleLinkClick(`/card/${card.title}`)} state={{ card }} className="button">View Now</Link>
+                                                    <Link to={`/card/${card.title}`} onClick={() => handleLinkClick(`/card/${card.title}`)} state={{ card }} className="button">View Now</Link>
                                                 </div>                                </div>
 
                                         </SwiperSlide>
@@ -613,7 +612,7 @@ const Main = () => {
                     <figure>
                         <section class="section__third is--scrolled js--scrollify js--third" data-section-name="third">
                             <div className='row'>
-                            <Swiper
+                                <Swiper
                                     slidesPerView={1}
                                     spaceBetween={20}
                                     style={{
@@ -628,20 +627,20 @@ const Main = () => {
                                         640: {
                                             slidesPerView: 1,
                                             spaceBetween: 20,
-                                            price: "$5.00",
-                                            note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
+                                            price: "$6.00",
+                                            note: "Note: The description provided does not reflect the actual content of the card, it merely describes what is contained inside."
                                         },
                                         768: {
                                             slidesPerView: 1,
                                             spaceBetween: 40,
-                                            price: "$5.00",
-                                            note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
+                                            price: "$6.00",
+                                            note: "Note: The description provided does not reflect the actual content of the card, it merely describes what is contained inside."
                                         },
                                         1024: {
                                             slidesPerView: 3,
                                             spaceBetween: 50,
-                                            price: "$5.00",
-                                            note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
+                                            price: "$6.00",
+                                            note: "Note: The description provided does not reflect the actual content of the card, it merely describes what is contained inside."
                                         },
                                     }}
                                     modules={[Navigation, Pagination]}
@@ -649,19 +648,19 @@ const Main = () => {
                                 >
                                     {middle.map((card, index) => (
                                         <SwiperSlide key={index}>
-                                          
+
                                             <div className='cards'>
                                                 <img src={card.img} class=" img2 " alt="..." />
 
                                                 <div className="info">
-                                                   <Link to={`/card/${card.title}`} onClick={() => handleLinkClick(`/card/${card.title}`)} state={{ card }} className="button">View Now</Link>
+                                                    <Link to={`/card/${card.title}`} onClick={() => handleLinkClick(`/card/${card.title}`)} state={{ card }} className="button">View Now</Link>
                                                 </div>                                </div>
 
                                         </SwiperSlide>
                                     ))}
                                 </Swiper>
 
-                                <div className='col-lg-4   '><br /><br /> <br /><br /> <br /> 
+                                <div className='col-lg-4   '><br /><br /> <br /><br /> <br />
                                     <div className='begin ' data-aos="zoom-in-down" data-aos-duration="1000" style={{ marginTop: "-100px" }}>
                                         <h4 className='text-center'>Middle</h4>
                                         {/* <Link to="/middle" style={{ listStyle: "none", textDecoration: "none" }}>
@@ -703,7 +702,7 @@ const Main = () => {
                                 {/* <div className='col-lg-4  '>
 <img src='/mid3.png' className='img'  />
 </div> */}
-                                 <Swiper
+                                <Swiper
                                     slidesPerView={1}
                                     spaceBetween={20}
                                     style={{
@@ -718,20 +717,20 @@ const Main = () => {
                                         640: {
                                             slidesPerView: 1,
                                             spaceBetween: 20,
-                                            price: "$5.00",
-                                            note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
+                                            price: "$6.00",
+                                            note: "Note: The description provided does not reflect the actual content of the card, it merely describes what is contained inside."
                                         },
                                         768: {
                                             slidesPerView: 1,
                                             spaceBetween: 40,
-                                            price: "$5.00",
-                                            note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
+                                            price: "$6.00",
+                                            note: "Note: The description provided does not reflect the actual content of the card, it merely describes what is contained inside."
                                         },
                                         1024: {
                                             slidesPerView: 3,
                                             spaceBetween: 50,
-                                            price: "$5.00",
-                                            note: "Note: The above mentioned description is not the content in the card, it just describes the content inside the card."
+                                            price: "$6.00",
+                                            note: "Note: The description provided does not reflect the actual content of the card, it merely describes what is contained inside."
                                         },
                                     }}
                                     modules={[Navigation, Pagination]}
@@ -743,7 +742,7 @@ const Main = () => {
                                                 <img src={card.img} class=" img2 " alt="..." />
 
                                                 <div className="info">
-                                                   <Link to={`/card/${card.title}`} onClick={() => handleLinkClick(`/card/${card.title}`)} state={{ card }} className="button">View Now</Link>
+                                                    <Link to={`/card/${card.title}`} onClick={() => handleLinkClick(`/card/${card.title}`)} state={{ card }} className="button">View Now</Link>
                                                 </div>                                </div>
 
                                         </SwiperSlide>
@@ -753,7 +752,7 @@ const Main = () => {
                                 <div className='col-lg-4  ' style={{
 
                                     marginTop: "-0px"
-                                }} >  
+                                }} >
                                     <div className='begins' data-aos="zoom-in-down" data-aos-duration="1000">
                                         <h4 className='text-center'>CROSSROAD</h4>
                                         <Link to="/crossroad" onClick={() => handleLinkClick(`/crossroad`)} style={{ listStyle: "none", textDecoration: "none" }}>

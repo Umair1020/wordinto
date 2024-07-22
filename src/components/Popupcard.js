@@ -1,5 +1,6 @@
 import "./card.css";
 import { useState } from "react";
+import { Helmet } from "react-helmet";
 
 const Popupcard = ({ onClose }) => {
     const [formData, setFormData] = useState({
@@ -85,6 +86,9 @@ const Popupcard = ({ onClose }) => {
 
     return (
         <div>
+             <Helmet>
+        <title>Into Words - Contact</title>
+      </Helmet>
             <div className="khaplu_modal" id="khaplu_modal" bis_skin_checked="1" style={{ display: "block" }}></div>
             <div className="main_khaplu_popup" id="main_khaplu_popup" bis_skin_checked="1" style={{ top: "50%", opacity: "1" }}>
                 <div className="khaplu_popup" bis_skin_checked="1">

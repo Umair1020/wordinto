@@ -3,6 +3,9 @@ import { Footer } from './components/Footer';
 import Main from './components/Main';
 import { useMediaQuery } from "react-responsive";
 import Header from './components/Header/Header';
+import { Helmet } from 'react-helmet';
+import TawkTo from './TawkTo';
+
 const Home = () => {
 
     const Desktop = ({ children }) => {
@@ -16,7 +19,12 @@ const Home = () => {
     }
     return (
         <>
+            <Helmet>
+                <title>Into Words - Home</title>
+            </Helmet>
+            <TawkTo />
             <Desktop>
+
                 <div className='' style={{ background: "#000" }}>
                     <Main />
                     <Footer />
