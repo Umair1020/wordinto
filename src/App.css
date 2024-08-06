@@ -8,7 +8,12 @@
   overflow-x: visible;
   border: none !important;
 }
-
+.sq-card-wrapper {
+  display: block !important;
+  min-width: 100%;
+  width: 100%;
+  align-items: flex-start;
+}
 body {
   overflow-x: hidden;
 }

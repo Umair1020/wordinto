@@ -4,6 +4,7 @@ import Main from './components/Main';
 import { useMediaQuery } from "react-responsive";
 import Header from './components/Header/Header';
 import { Helmet } from 'react-helmet';
+import ReactAudioPlayer from "react-audio-player";
 import TawkTo from './TawkTo';
 
 const Home = () => {
@@ -23,6 +24,11 @@ const Home = () => {
                 <title>Into Words - Home</title>
             </Helmet>
             <TawkTo />
+            <ReactAudioPlayer
+                src="/night.mp3"
+                autoPlay
+                loop
+            />
             <Desktop>
 
                 <div className='' style={{ background: "#000" }}>
