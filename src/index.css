@@ -33,3 +33,52 @@
   text-align: left;
 }
 
+
+.input-container {
+  border-color: #2D2D2D;
+  border-radius: 6px;
+}
+
+.input-container.is-focus {
+  border-color: #006AFF;
+}
+
+.input-container.is-error {
+  border-color: #ff1600;
+}
+
+.message-text {
+  color: #999999;
+}
+
+.message-icon {
+  color: #999999;
+}
+
+.message-text.is-error {
+  color: #ff1600;
+}
+
+.message-icon.is-error {
+  color: #ff1600;
+}
+
+input {
+  background-color: #2D2D2D;
+  color: #FFFFFF;
+  font-family: 'helvetica neue', sans-serif;
+}
+
+input::placeholder {
+  color: #999999;
+}
+
+input.is-error {
+  color: #ff1600;
+}
+
+@media screen and (max-width: 600px) {
+  input {
+    font-size: 12px;
+  }
+}
